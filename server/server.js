@@ -11,9 +11,9 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
- 
-// importamos las rutas del usuario
-app.use( require('./routes/usuario') );
+
+// importamos todas las rutas que se encuantran en routes/index
+app.use(require('./routes/index'));
 
 
 // Connect DB
@@ -26,7 +26,6 @@ mongoose.connect(process.env.URLDB, {
 
     console.log('Connect DB')
 });
-
 
 app.listen(process.env.PORT, ()=>{
    console.log('Escuchando puerto: ', process.env.PORT); 

@@ -1,11 +1,11 @@
-// ===============
+// =============================
 // Puerto, se configura el puerto para local y en producción
-// ===============
+// =============================
 process.env.PORT = process.env.PORT || 3000
 
-// ===============
+// =============================
 // Base de datos, se configura la conexión para local y en producción
-// ===============
+// =============================
 
 //Entorno 
 process.env.NODE_ENV = process.env.NODE_ENV || 'dev'
@@ -20,6 +20,22 @@ if (process.env.NODE_ENV === 'dev') {
 
 // creamos la variable URLDB de manera global
 process.env.URLDB = urlDB;
+
+
+// =============================
+// Vencimiento del token
+// =============================
+// 60 segundos
+// 60 minutos
+// 24 horas
+// 30 días
+
+process.env.CADUCIDAD_TOKEN = 60 * 60 * 24 * 30;
+
+// =============================
+// SEED de autenticación
+// =============================
+process.env.SEED = process.env.SEED || 'este-es-el-seed-desarrollo';
 
 
 
