@@ -3,10 +3,10 @@
 // =============================
 process.env.PORT = process.env.PORT || 3000
 
+
 // =============================
 // Base de datos, se configura la conexión para local y en producción
 // =============================
-
 //Entorno 
 process.env.NODE_ENV = process.env.NODE_ENV || 'dev'
 
@@ -29,7 +29,6 @@ process.env.URLDB = urlDB;
 // 60 minutos
 // 24 horas
 // 30 días
-
 process.env.CADUCIDAD_TOKEN = 60 * 60 * 24 * 30;
 
 // =============================
@@ -39,4 +38,7 @@ process.env.SEED = process.env.SEED || 'este-es-el-seed-desarrollo';
 
 
 
-
+// =============================
+// Google Cliend ID, para el login
+// =============================
+process.env.CLIENT_ID = process.env.CLIENT_ID || '226251464091-r2nggv9unbr62sbgesg25aou091bju9v.apps.googleusercontent.com';
