@@ -23,7 +23,6 @@ app.use(express.static( path.resolve(__dirname, '../public')));
 
 // app.get('/', function (req, res) {
 //   res.render('index', {
-     
 //   });
 // })
 
@@ -32,6 +31,7 @@ mongoose.connect(process.env.URLDB, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
+  useFindAndModify: false
 },(err)=>{
     if(err) throw err;
 

@@ -54,7 +54,7 @@ app.post('/usuario',  [verificaToken, verificaAdminRole], (req, res)=> {
         role: body.role
     });
 
-    usuario.save((err, usuarrioDB)=>{
+    usuario.save((err, usuarioDB)=>{
         if(err){
             return res.status(400).json({
                 ok:false,
@@ -64,7 +64,7 @@ app.post('/usuario',  [verificaToken, verificaAdminRole], (req, res)=> {
 
         res.json({
             ok: true,
-            usuario: usuarrioDB
+            usuario: usuarioDB
         })
     });
 })
@@ -76,7 +76,7 @@ app.put('/usuario/:id', [verificaToken, verificaAdminRole], (req, res)=> {
     let body = _.pick(req.body, ['nombre', 'email', 'img', 'role', 'estado']);
 
     // {new:true, runValidators: true} indico que me regrese el registro actualizado y me realice las validaciones
-    Usuario.findByIdAndUpdate(id, body, {new:true, runValidators: true}, (err, usuarrioDB)=>{
+    Usuario.findByIdAndUpdate(id, body, {new:true, runValidators: true}, (err, usuarioDB)=>{
         if(err){
             return res.status(400).json({
                 ok:false,
@@ -86,7 +86,7 @@ app.put('/usuario/:id', [verificaToken, verificaAdminRole], (req, res)=> {
         
         res.json({
             ok: true,
-            usuario: usuarrioDB
+            usuario: usuarioDB
         });
     });
     
@@ -104,7 +104,7 @@ app.delete('/usuario/:id', [verificaToken, verificaAdminRole], (req, res) => {
         estado: false
     }
 
-    Usuario.findByIdAndUpdate(id, cambiaEstado, (err, usurioBorrado)=>{
+    Usuario.findByIdAndUpdate(id, cambiaEstado, (err, usuarioBorrado)=>{
         if(err){
             return res.status(400).json({
                 ok:false,
@@ -112,7 +112,7 @@ app.delete('/usuario/:id', [verificaToken, verificaAdminRole], (req, res) => {
             });
         }
 
-        if(!usurioBorrado){
+        if(!usuarioBorrado){
             return res.status(400).json({
                 ok:false,
                 err: {
@@ -123,7 +123,7 @@ app.delete('/usuario/:id', [verificaToken, verificaAdminRole], (req, res) => {
 
         res.json({
             ok: true,
-            usuario: usurioBorrado
+            usuario: usuarioBorrado
         });
     });
     
