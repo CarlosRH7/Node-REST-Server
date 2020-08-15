@@ -23,10 +23,14 @@ node -v
 npm -v
 ```
 
-Iniciando: 
+Instalación de paquetes:
 
 ```
 cd Node-REST-Server
 npm install
+```
+
+Iniciamos el servidor:
+```
 node server/server
 ```
