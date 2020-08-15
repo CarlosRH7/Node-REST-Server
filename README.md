@@ -1,6 +1,6 @@
 ## Aplicación Web - REST Server
 
-Aplicación web de registro de usuarios, categorias, subida de archivos y creación de tokens.
+Aplicación Backend REST Server, para registro de usuarios, categorias, subida de archivos y creación de tokens.
 Esta aplicación esta lista y configurada para realizar el deploy a un servidor en la nube. 
 
 ### Requerimientos
@@ -12,7 +12,7 @@ Descargue e instale NodeJs.
 
 Clona este repositorio a tu máquina local usando:
 
-	git clone https://github.com/CarlosRH7/
+	git clone https://github.com/CarlosRH7/Node-REST-Server.git
 
 ### Arrancando
 
@@ -26,7 +26,7 @@ npm -v
 Iniciando: 
 
 ```
-cd 
+cd Node-REST-Server
 npm install
-node app 
+node server/server
 ```
